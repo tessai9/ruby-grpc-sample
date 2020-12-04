@@ -1,0 +1,20 @@
+syntax = "proto3";
+package vtuber;
+
+service VtuberService {
+  rpc SearchVtuber (SearchRequest) returns (SearchResponse);
+}
+
+message SearchRequest {
+  string id = 1;
+}
+
+message SearchResponse {
+  string name = 1;
+  string channel_id = 2;
+}
+
+message Vtuber {
+  string name = 1;
+  string channel_id = 2;
+}
